@@ -32,7 +32,7 @@ const ImageSlider = () => {
 //                 zIndex:-1,
 //             }}
 // >
-//     <source src={BackgroundVideo} type="/resim/vid.mp4"/>
+//     <source src={BackgroundVideo} type=""/>
 // </video>
 // </div>
 //     );
@@ -42,21 +42,21 @@ const ImageSlider = () => {
         {
             id: 1,
             title: 'Beautiful Beach',
-            image: '/resim/1.jpg',
+            image: '',
         },
         {
             id: 2,
             title: 'Mountain Adventure',
-            image: '/resim//2.jpg',
+            image: '',
         },
         {
             id: 3,
             title: 'City Lights',
-            image: '/resim//3.jpg',
+            image: '',
         },
         // {
         //    id:4,
-        //    video: '/resim/vid.mp4',
+        //    video: '',
         //   title: 'Video 1'
         // },
     ];
