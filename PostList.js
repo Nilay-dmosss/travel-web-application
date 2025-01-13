@@ -15,21 +15,21 @@ const PostList = () => {
             title: "İlk Post",
             content: "Bu, ilk post içeriğidir.",
             author: "Yazar 1",
-            image: "example1.jpg", // Örnek 
+            image: "", // Örnek 
             createdAt: new Date().toISOString(),
         },
         {
             title: "İkinci Post",
             content: "Bu, ikinci post içeriğidir.",
             author: "Yazar 2",
-            image: "example2.jpg", // Örnek 
+            image: "example2", // Örnek 
             createdAt: new Date().toISOString(),
         },
         {
             title: "Üçüncü Post",
             content: "Bu, üçüncü post içeriğidir.",
             author: "Yazar 3",
-            image: "example3.jpg", 
+            image: "", 
             createdAt: new Date().toISOString(),
         },
     ];
@@ -45,7 +45,7 @@ const PostList = () => {
         const token = localStorage.getItem('token');
         if (!token) return alert('Please login to save favorites');
         
-        axios.post(`http://localhost:5000/api/favorites/${postId}`, {}, {
+        axios.post(``, {}, {
             headers: { Authorization: `Bearer ${token}` }
         }).then(() => {
             setFavorites([...favorites, postId]);
@@ -63,7 +63,7 @@ const PostList = () => {
                         <h2>{post.title}</h2>
                         <p>{post.content}</p>
                         <p><strong>Yazar:</strong> {post.author}</p>
-                        {post.image && <img src={`http://localhost:5000/images/${post.image}`} alt={post.title} style={{ maxWidth: '300px' }} />}
+                        {post.image && <img src={`}`} alt={post.title} style={{ maxWidth: '300px' }} />}
                         <h5>{new Date(post.createdAt).toLocaleDateString()}</h5>
                     </div>
                 ))
